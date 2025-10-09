@@ -1,0 +1,390 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ihsan Javid - Portfolio Website</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Google Font Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Allura&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet" />
+    <!-- Remix Icon -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet" />
+
+    <!-- GSAP Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+  </head>
+  <body>
+    <!------------------------------------ Header  ---------------------------->
+    <main>
+      <header id="header">
+        <div class="container">
+          <div class="logo">
+            <a href="#home">Ihsan Jaivd<span>.</span></a>
+          </div>
+          <button class="menu-btn" id="menu-btn">
+            <i class="ri-menu-4-line"></i>
+          </button>
+          <nav>
+            <ul>
+              <li><a href="#about">About</a></li>
+              <li><a href="#skill">Skills</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <!--------------------------------------- Hero Section  ----------------------------------->
+      <section class="hero" id="home">
+        <div class="container">
+          <div class="hero-left-side">
+            <h1>I am <span>Ihsan Javid</span></h1>
+            <div class="skill-wrapper">
+              <h3 class="skill-text" id="skill-text"></h3>
+              <span class="cursor">|</span>
+            </div>
+            <div class="para">
+              <p>
+                - Passionate creator who loves turning ideas into meaningful
+                digital experiences. I blend creativity with clarity and detail,
+                always aiming to make every concept stand out.
+              </p>
+            </div>
+            <div class="btn">
+              <button>Contact Me</button>
+            </div>
+            <div class="socials info-socials">
+              <button
+                class="social-btn"
+                onclick="window.open('https://www.linkedin.com/in/ihsan-javid01/','_blank')">
+                <i class="ri-linkedin-box-fill"></i>
+              </button>
+              <button
+                class="social-btn"
+                onclick="window.open('https://github.com/ihsan-javid', '_blank')">
+                <i class="ri-github-fill"></i>
+              </button>
+              <button
+                class="social-btn"
+                onclick="window.open('https://www.instagram.com/ihsanjavid.code/', '_blank')">
+                <i class="ri-instagram-fill"></i>
+              </button>
+              <button
+                class="social-btn"
+                onclick="window.open('https://www.facebook.com/ihsanjavid.code','_blank')">
+                <i class="ri-facebook-box-fill"></i>
+              </button>
+            </div>
+          </div>
+          <div class="hero-right-side">
+            <div class="img-container">
+              <img src="./assets/My Photo.jpg" alt="My image" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!---------------------------------- About Section  ------------------------------------------->
+      <section class="about" id="about">
+        <div class="container">
+          <div class="heading">
+            <h1>About</h1>
+            <h1 class="last-heading">ME</h1>
+          </div>
+          <div class="description">
+            <h1>Who i am</h1>
+            <p>
+              I’m Ihsan, a creator who loves combining logic with creativity.
+              What started as experimenting with small pieces of code, sketches,
+              and visuals has grown into a passion for building complete digital
+              experiences. I focus on keeping things simple and effective, while
+              paying close attention to the details that make a project polished
+              and meaningful. For me, it’s not just about completing tasks—it’s
+              about creating work that feels natural to use, makes a lasting
+              impression, and stands the test of time.
+            </p>
+            <div class="cv btn">
+              <button>Download cv</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!---------------------------------- Skill Section  ------------------------------------------->
+      <section class="skill" id="skill">
+        <div class="container">
+          <div class="heading">
+            <h1>Skill</h1>
+            <h1 class="last-heading">Set</h1>
+          </div>
+          <div class="skills-container">
+            <div class="skills-grid">
+              <!-- Frontend & Libraries -->
+              <div class="skill-card">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" />
+                <p>HTML</p>
+              </div>
+              <div class="skill-card">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" />
+                <p>CSS</p>
+              </div>
+              <div class="skill-card">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
+                <p>JavaScript</p>
+              </div>
+              <div class="skill-card">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
+                <p>React</p>
+              </div>
+              <div class="skill-card">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" />
+                <p>Next.js</p>
+              </div>
+              <div class="skill-card hide-mobile">
+                <img src="./assets/framer-motion.svg" />
+                <p>Framer Motion</p>
+              </div>
+              <div class="skill-card hide-mobile">
+                <img src="./assets/gsap.svg" />
+                <p>GSAP</p>
+              </div>
+              <div class="skill-card">
+                <img src="assets/tailwind.svg" />
+                <p>Tailwind</p>
+              </div>
+              <div class="skill-card hide-mobile">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" />
+                <p>Bootstrap</p>
+              </div>
+
+              <!-- Backend -->
+              <div class="skill-card">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" />
+                <p>Node.js</p>
+              </div>
+              <div class="skill-card">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" />
+                <p>Express</p>
+              </div>
+
+              <!-- Database -->
+              <div class="skill-card">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" />
+                <p>MongoDB</p>
+              </div>
+              <div class="skill-card">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" />
+                <p>SQL</p>
+              </div>
+
+              <!-- Languages -->
+              <div class="skill-card">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" />
+                <p>Python</p>
+              </div>
+
+              <!-- Tools -->
+              <div class="skill-card">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" />
+                <p>Git</p>
+              </div>
+              <div class="skill-card">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" />
+                <p>GitHub</p>
+              </div>
+              <div class="skill-card hide-mobile">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" />
+                <p>VS Code</p>
+              </div>
+              <div class="skill-card">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" />
+                <p>Figma</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!------------------------------------ Projects Section -------------------------------------->
+      <section class="project" id="projects">
+        <div class="container">
+          <div class="heading">
+            <h1>Featured</h1>
+            <h1 class="last-heading">Projects</h1>
+          </div>
+          <div class="project-container">
+            <div class="project-card">
+              <img src="./assets/p1.png" alt="Weather App" />
+              <div class="layer">
+                <h3>Weather App</h3>
+                <p>
+                  A modern weather app that displays real-time forecasts and air
+                  quality using WeatherAPI with a sleek, responsive design.
+                </p>
+                <a href="https://ihsanweather.netlify.app/">
+                  <i class="ri-logout-circle-r-line"></i>
+                </a>
+              </div>
+            </div>
+            <div class="project-card">
+              <img src="./assets/p2.png" alt="Chat App" />
+              <div class="layer">
+                <h3>NestiGo</h3>
+                <p>
+                  A full-stack Airbnb Clone built with the MERN stack, featuring
+                  property listings, user authentication, and booking
+                  functionality.
+                </p>
+                <a href="#" target="_blank">
+                  <i class="ri-logout-circle-r-line"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <img src="./assets/p3.png" alt="Blog Platform" />
+              <div class="layer">
+                <h3>Simon Says Game</h3>
+                <p>
+                  A modern glass-style Simon Says Game that tests your memory
+                  with glowing buttons, smooth animations, and level-based
+                  challenges.
+                </p>
+                <a href="https://simon-says-challenge.netlify.app/">
+                  <i class="ri-logout-circle-r-line"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="btn see-more-btn">
+            <button
+              onclick="window.open('https://github.com/ihsan-javid', '_blank')">
+              See More <span><i class="ri-arrow-right-line"></i></span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!------------------------------------- Contact Section -------------------------------------->
+      <section id="contact" class="contact">
+        <div class="container">
+          <div class="heading">
+            <h1>Get In</h1>
+            <h1 class="last-heading">Touch</h1>
+          </div>
+          <div class="contact-info">
+            <div class="left-side-info">
+              <div class="info">
+                <a href="mailto:ihsanjavid.me@gmail.com" class="info-item">
+                  <i class="ri-mail-fill"></i>
+                  <p>ihsanjavid.me@gmail.com</p>
+                </a>
+                <a href="tel:+92 334 1948027" class="info-item">
+                  <i class="ri-phone-fill"></i>
+                  <p>+92 334 1948027</p>
+                </a>
+                <div class="socials info-socials">
+                  <button
+                    class="social-btn"
+                    onclick="window.open('https://www.linkedin.com/in/ihsan-javid01/','_blank')">
+                    <i class="ri-linkedin-box-fill"></i>
+                  </button>
+                  <button
+                    class="social-btn"
+                    onclick="window.open('https://github.com/ihsan-javid', '_blank')">
+                    <i class="ri-github-fill"></i>
+                  </button>
+                  <button
+                    class="social-btn"
+                    onclick="window.open('https://www.instagram.com/ihsanjavid.code/', '_blank')">
+                    <i class="ri-instagram-fill"></i>
+                  </button>
+                  <button
+                    class="social-btn"
+                    onclick="window.open('https://www.facebook.com/ihsanjavid.code','_blank')">
+                    <i class="ri-facebook-box-fill"></i>
+                  </button>
+                </div>
+                <div class="cv btn info-cv">
+                  <button>Download cv</button>
+                </div>
+              </div>
+            </div>
+            <div class="right-side-info">
+              <form action="https://api.web3forms.com/submit" method="POST">
+                <div class="form-group">
+                  <input
+                    type="hidden"
+                    name="access_key"
+                    value="3c6b9019-1523-47dd-8e66-e6d9b619520e" />
+                  <input
+                    type="text"
+                    id="name"
+                    class="inp"
+                    name="name"
+                    placeholder="Your Name"
+                    required />
+                  <input
+                    type="email"
+                    id="email"
+                    class="inp"
+                    name="email"
+                    placeholder="Your Email"
+                    required />
+                  <textarea
+                    name="message"
+                    id="message"
+                    class="inp"
+                    required
+                    placeholder="Your Massage"
+                    rows="5"></textarea>
+                  <div class="btn">
+                    <button type="submit">Submit</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-------------------------------------------- Footer --------------------------------------->
+      <footer>
+        <div class="container">
+          <p>
+            Copyright &copy; ihsan. Made with
+            <span><i class="ri-heart-fill"></i></span> by Ihsan Javid
+          </p>
+        </div>
+      </footer>
+    </main>
+    <!-- EmailJS Script (CDN) -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
