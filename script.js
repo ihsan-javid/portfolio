@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Menu Button Toggle
   const menuBtn = document.querySelector("#menu-btn");
   const nav = document.querySelector("nav");
 
@@ -9,58 +8,54 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Smooth scroll function
-  function smoothScrollToElement(targetId) {
-    const targetElement = document.querySelector(targetId);
-    if (targetElement) {
+  function scrollToSection(sectionId) {
+    const section = document.querySelector(sectionId);
+    if (!section) {
+      return;
+    }
+
+    if (nav && nav.classList.contains("active")) {
+      nav.classList.remove("active");
+    }
+
+    setTimeout(() => {
       gsap.to(window, {
-        duration: 0.8,
+        duration: 0.5,
         scrollTo: {
-          y: targetElement,
-          autoKill: true,
+          y: section,
+          offsetY: 70,
         },
         ease: "power2.inOut",
       });
-
-      // Close mobile menu if open
-      if (nav) {
-        nav.classList.remove("active");
-      }
-    }
+    }, 100);
   }
 
-  // Close menu when navigation link is clicked
-  const navLinks = document.querySelectorAll("nav ul li a");
+  const navLinks = document.querySelectorAll("nav a");
   navLinks.forEach((link) => {
     link.addEventListener("click", (e) => {
-      e.preventDefault();
-      const targetId = link.getAttribute("href");
-      smoothScrollToElement(targetId);
+      const href = link.getAttribute("href");
+      if (href && href.startsWith("#")) {
+        e.preventDefault();
+        scrollToSection(href);
+      }
     });
   });
 
-  // GSAP Smooth Scrolling for all anchor links (except nav links which are handled above)
-  const allLinks = document.querySelectorAll('a[href^="#"]');
-  allLinks.forEach((link) => {
-    // Skip nav links as they're already handled
-    if (!link.closest("nav")) {
-      link.addEventListener("click", function (e) {
-        e.preventDefault();
-        const targetId = this.getAttribute("href");
-        smoothScrollToElement(targetId);
-      });
-    }
-  });
-
-  // Contact Me button in hero section
-  const contactMeBtn = document.querySelector(".hero .btn button");
-  if (contactMeBtn) {
-    contactMeBtn.addEventListener("click", () => {
-      smoothScrollToElement("#contact");
+  const logoLink = document.querySelector(".logo a");
+  if (logoLink) {
+    logoLink.addEventListener("click", (e) => {
+      e.preventDefault();
+      scrollToSection("#home");
     });
   }
 
-  // Typewriter Animation
+  const contactBtn = document.querySelector(".hero .btn button");
+  if (contactBtn) {
+    contactBtn.addEventListener("click", () => {
+      scrollToSection("#contact");
+    });
+  }
+
   const skillText = document.getElementById("skill-text");
 
   if (skillText) {
