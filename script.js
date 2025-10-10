@@ -1,6 +1,3 @@
-/** @format */
-
-// Wait for DOM and GSAP to be loaded
 document.addEventListener("DOMContentLoaded", function () {
   // Menu Button Toggle
   const menuBtn = document.querySelector("#menu-btn");
@@ -12,60 +9,54 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  // Smooth scroll function
+  function smoothScrollToElement(targetId) {
+    const targetElement = document.querySelector(targetId);
+    if (targetElement) {
+      gsap.to(window, {
+        duration: 0.8,
+        scrollTo: {
+          y: targetElement,
+          autoKill: true,
+        },
+        ease: "power2.inOut",
+      });
+
+      // Close mobile menu if open
+      if (nav) {
+        nav.classList.remove("active");
+      }
+    }
+  }
+
   // Close menu when navigation link is clicked
   const navLinks = document.querySelectorAll("nav ul li a");
   navLinks.forEach((link) => {
-    link.addEventListener("click", () => {
-      nav.classList.remove("active");
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      const targetId = link.getAttribute("href");
+      smoothScrollToElement(targetId);
     });
   });
 
-  // GSAP Smooth Scrolling for all anchor links
+  // GSAP Smooth Scrolling for all anchor links (except nav links which are handled above)
   const allLinks = document.querySelectorAll('a[href^="#"]');
   allLinks.forEach((link) => {
-    link.addEventListener("click", function (e) {
-      e.preventDefault();
-      const targetId = this.getAttribute("href");
-      const targetElement = document.querySelector(targetId);
-
-      if (targetElement) {
-        // Use GSAP for smooth scroll animation
-        gsap.to(window, {
-          duration: 0.8,
-          scrollTo: {
-            y: targetElement,
-            autoKill: true,
-          },
-          ease: "power2.inOut",
-        });
-
-        // Close mobile menu if open
-        if (nav) {
-          nav.classList.remove("active");
-        }
-      }
-    });
+    // Skip nav links as they're already handled
+    if (!link.closest("nav")) {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute("href");
+        smoothScrollToElement(targetId);
+      });
+    }
   });
 
   // Contact Me button in hero section
   const contactMeBtn = document.querySelector(".hero .btn button");
   if (contactMeBtn) {
     contactMeBtn.addEventListener("click", () => {
-      const contactSection = document.querySelector("#contact");
-      if (contactSection) {
-        gsap.to(window, {
-          duration: 0.8,
-          scrollTo: {
-            y: contactSection,
-            autoKill: true,
-          },
-          ease: "power2.inOut",
-        });
-
-        if (nav) {
-          nav.classList.remove("active");
-        }
-      }
+      smoothScrollToElement("#contact");
     });
   }
 
