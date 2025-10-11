@@ -64,7 +64,7 @@ It includes smooth animations, responsive layouts, and a clear focus on storytel
 ## 📬 Contact
 
 📧 **Email:** [ihsanjavid.me@gmail.com](mailto:ihsanjavid.me@gmail.com)  
-💼 **LinkedIn:** [linkedin.com/in/ihsan-javid01](https://www.linkedin.com/in/ihsan-javid)  
+💼 **LinkedIn:** [linkedin.com/in/ihsan-javid](https://www.linkedin.com/in/ihsan-javid)  
 🐙 **GitHub:** [github.com/ihsan-javid](https://github.com/ihsan-javid)  
 📸 **Instagram:** [@ihsanjavid.code](https://www.instagram.com/ihsanjavid.code/)
 
